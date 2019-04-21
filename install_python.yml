@@ -1,0 +1,13 @@
+- hosts: app-servers
+  tasks:
+    - name: Update apt packages and install python
+      apt:
+        name: python
+        state: present 
+        update_cache: true
+    - name: Get python version
+      shell: python --version
+      register: python_version
+    - name: Display python version
+      debug: 
+        var: python_version.stderr

@@ -1,0 +1,7 @@
+[app-servers]
+example1 ansible_host=localhost ansible_port=32768 ansible_user=root ansible_ssh_pass=THEPASSWORDYOUCREATED
+example2 ansible_host=localhost ansible_port=32769 ansible_user=root ansible_ssh_pass=THEPASSWORDYOUCREATED
+example3 ansible_host=localhost ansible_port=32770 ansible_user=root ansible_ssh_pass=THEPASSWORDYOUCREATED
+
+[app-servers:vars]
+ansible_python_interpreter=/usr/bin/python3
